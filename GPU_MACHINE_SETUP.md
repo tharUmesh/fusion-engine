@@ -5,7 +5,7 @@ Steps to pick up the full-dataset batch run on a different (ideally GPU) machine
 ## 1. Clone
 
 ```
-git clone <your-remote-or-copy-the-repo> "Fusion Engine"
+git clone https://github.com/tharUmesh/fusion-engine.git
 cd "Fusion Engine"
 ```
 
