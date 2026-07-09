@@ -1,0 +1,27 @@
+# Isolated per-model venvs -- 7.5GB+, platform-specific, recreate on target
+# machine from the pip install commands in Integration_API.md #4.
+.venvs/
+
+# Dataset video clips -- 2.5GB, brought over manually per-machine.
+# Only raw/ (the actual mp4s) is excluded; annotations/ (scenarios.csv,
+# clips.csv, splits.csv -- ~450KB total) is a sibling folder, not matched by
+# this pattern, so it stays versioned.
+Data/Dataset/*/raw/
+
+# Phase 0 batch-run outputs -- large, regenerated fresh per machine/run.
+# (motion_stats.csv and *.log are also run artifacts, not source.)
+pipeline/measured/*.jsonl
+pipeline/measured/*.csv
+pipeline/measured/*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude Code local settings/state -- machine-specific, not project source
+.claude/
+
+# Scratch/temp
+.smoke_batch/
+.test_output/

@@ -1,0 +1,18 @@
+{
+  "version": "v2",
+  "motion_labels": [
+    "Sitting Still",
+    "Standing Still",
+    "Walk Toward",
+    "Step/Walk Back",
+    "Walk Across",
+    "Run Backward",
+    "Run (Fast Movement)",
+    "Leaning Forward",
+    "Frozen/Rigid Stand"
+  ],
+  "samples_per_class": 200,
+  "frames_per_sequence": 30,
+  "num_keypoints": 33,
+  "total_sequences": 1800
+}

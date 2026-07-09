@@ -1,0 +1,71 @@
+# Virtual Environment
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Video files (testVideo folder should contain only .gitkeep)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.webm
+*.m4v
+*.3gp
+
+# Output files (keep output folder structure but exclude actual results)
+output/*.avi
+output/*.mp4
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Scenario table extracts & PDFs
+HRI_Dataset_Table_extracted.txt
+HRI_Dataset_Table.pdf
+doc/HRI_Dataset_Table_extracted.txt
+doc/HRI_Dataset_Table.pdf
+notes.txt
+implementation_plan.txt
+
+# Dataset directories
+extracted_keypoints_v2/
+

@@ -1,0 +1,24 @@
+Scenario ID,Context,Intent,Intended Emotion,Intended Gesture,Intended Motion,Intended Context
+S01,classroom,F04,neutral,raise hand,sitting,classroom
+S02,classroom,F01,happy,wave,walk (toward),classroom
+S03,classroom,F05,neutral,Point / (writing),sitting,classroom
+S04,classroom,F04,sad,thumbs down,sitting,classroom
+S05,classroom,F02,angry,both hands up,stand,classroom
+S06,classroom,F08,disgust,thumbs down,stepping back,classroom
+S07,classroom,F03,neutral,beckoning,sitting,classroom
+S08,classroom,F06,neutral,[MISSING],walking,classroom
+S09,classroom,F02,surprise,both hands up,stand,classroom
+S11,classroom,F05,happy,Raise hand,sitting,classroom
+S12,classroom,F01,happy,thumbs up,sitting,classroom
+S18,kitchen,F01,happy,thumbs up,stand,kitchen
+S19,kitchen,F02,fear,both hands up,Move backward (run),kitchen
+S20,kitchen,F03,neutral,beckoning,walk,kitchen
+S21,kitchen,F04,sad,thumbs down,sitting,kitchen
+S22,kitchen,F05,neutral,point,stand,kitchen
+S23,kitchen,F08,disgust,thumbs down,stepping back,kitchen
+S24,kitchen,F07,angry,both hands up,stand,kitchen
+S25,kitchen,F09,happy,wave,walk,kitchen
+S26,kitchen,F02,surprise,both hands up,stepping back,kitchen
+S27,kitchen,F06,disgust,point,stepping back,kitchen
+S28,kitchen,F10,sad,thumbs down,sitting,kitchen
+S29,kitchen,F03,neutral,point,walk,kitchen
