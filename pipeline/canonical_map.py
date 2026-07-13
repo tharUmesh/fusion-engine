@@ -39,20 +39,32 @@ GESTURE_MAP = {
     "wave": "wave",
 }
 
-# scenarios.csv "Intended Motion" -> Motion Repo's MOTION_LABELS.
-# "stepping back" has no dedicated class in the runtime 8-class taxonomy --
-# action_recognizer.py's own authors merged "Walk Toward"/"Step Back" into a
-# single "Walking" class (direction from a fixed camera was judged
-# unreliable, see MODEL_ANALYSIS.md #3.3) -- so "stepping back" maps to
-# "Walking" here too, consistently with that merge decision.
+# scenarios.csv "Intended Motion" -> Motion Repo's new 4-class taxonomy
+# (sitting / standing / walking / stepping_back -- see inference.py's
+# MOTION_LABELS). Updated 2026-07 when the Motion Repo was replaced with a
+# fine-tuned LSTM+attention model (see runners/motion_runner.py).
+#
+# "stepping back" now has its own dedicated class -- the old 8-class
+# taxonomy's merge of "Walk Toward"/"Step Back" into "Walking" (because
+# direction from a fixed camera was judged unreliable, MODEL_ANALYSIS.md
+# #3.3) no longer applies; the new model was trained with a dedicated
+# stepping_back class, so map directly.
+#
+# "move backward (run)" (S19's Intended Motion) is INTENTIONALLY left
+# unmapped: the new 4-class taxonomy has no running/backward-run class at
+# all, so there is no honest canonical target for it. Leaving it out of this
+# table makes map_intended() raise KeyError, which agreement_report.py
+# catches and reports as "(no intended value)" rather than a corrupted
+# label. Do not force-map this to "stepping_back" or "walking" -- that would
+# be inventing agreement rather than reporting a genuine taxonomy gap. See
+# Phase 0 agreement report for the flagged scenario (S19_F02).
 MOTION_MAP = {
-    "move backward (run)": "Run Backward",
-    "sitting": "Sitting Still",
-    "stand": "Standing Still",
-    "stepping back": "Walking",
-    "walk": "Walking",
-    "walk (toward)": "Walking",
-    "walking": "Walking",
+    "sitting": "sitting",
+    "stand": "standing",
+    "stepping back": "stepping_back",
+    "walk": "walking",
+    "walk (toward)": "walking",
+    "walking": "walking",
 }
 
 # scenarios.csv "Context"/"Intended Context" -> Context Repo's SCENE_LABELS

@@ -1,0 +1,139 @@
+# Phase 0 — Cue Agreement Report
+
+Intended cue (scenarios.csv, authored) vs. measured clip-level dominant cue
+(majority vote over VALID frames only, per `aggregate_clip_cues.py`). No cue-model
+gate/threshold/decision logic was modified to produce this data — disagreements are
+recorded as findings, not patched. **Do not proceed to feature-building until this
+report has been reviewed.**
+
+**Total (scenario, cue) pairs evaluated:** 92
+**cue_corrupted (measured dominant disagrees with intended):** 17
+**...of which singleton scenarios (n_clips==1, low-confidence signal):** 0
+
+## Known systematic disagreement patterns
+
+These two patterns were already root-caused during runner validation (not runner bugs —
+see `MODEL_ANALYSIS.md` §5.3) and are explicitly surfaced here wherever they recur:
+
+| scenario_id | cue | intended | measured | pattern |
+|---|---|---|---|---|
+| (none observed in this run) | | | | |
+
+## All cue_corrupted scenarios
+
+| scenario_id | cue | intended | measured | clips (usable/total) | agree/disagree | singleton? | known pattern |
+|---|---|---|---|---|---|---|---|
+| S04_F04 | emotion | Sad | Neutral | 61/61 | 7/54 | no | — |
+| S05_F02 | emotion | Anger | Happy | 35/50 | 3/32 | no | — |
+| S06_F08 | emotion | Disgust | Neutral | 39/63 | 6/33 | no | — |
+| S19_F02 | emotion | Fear | Surprise | 46/54 | 1/45 | no | — |
+| S21_F04 | emotion | Sad | Neutral | 44/58 | 14/30 | no | — |
+| S23_F08 | emotion | Disgust | Happy | 21/30 | 3/18 | no | — |
+| S24_F07 | emotion | Anger | Happy | 54/59 | 7/47 | no | — |
+| S27_F06 | emotion | Disgust | Neutral | 2/11 | 0/2 | no | — |
+| S28_F10 | emotion | Sad | Neutral | 48/67 | 5/43 | no | — |
+| S02_F01 | gesture | wave | raise_hand | 36/61 | 3/33 | no | — |
+| S03_F05 | gesture | point | wave | 7/55 | 0/7 | no | — |
+| S07_F03 | gesture | beckoning | raise_hand | 20/59 | 8/12 | no | — |
+| S20_F03 | gesture | beckoning | raise_hand | 38/63 | 14/24 | no | — |
+| S27_F06 | gesture | point | beckoning | 10/11 | 0/10 | no | — |
+| S08_F06 | motion | walking | standing | 56/56 | 13/43 | no | — |
+| S23_F08 | motion | stepping_back | walking | 30/30 | 11/19 | no | — |
+| S26_F02 | motion | stepping_back | standing | 48/48 | 0/48 | no | — |
+
+## Full per-scenario-per-cue table
+
+| scenario_id | cue | intended | measured | clips (usable/total) | insufficient-valid | corrupted? | singleton? |
+|---|---|---|---|---|---|---|---|
+| S01_F04 | context | classroom | classroom | 70/70 | 0 | no | no |
+| S01_F04 | emotion | Neutral | Neutral | 70/70 | 0 | no | no |
+| S01_F04 | gesture | raise_hand | raise_hand | 70/70 | 0 | no | no |
+| S01_F04 | motion | sitting | sitting | 69/70 | 1 | no | no |
+| S02_F01 | context | classroom | classroom | 61/61 | 0 | no | no |
+| S02_F01 | emotion | Happy | Happy | 60/61 | 1 | no | no |
+| S02_F01 | gesture | wave | raise_hand | 36/61 | 25 | YES | no |
+| S02_F01 | motion | walking | walking | 59/61 | 2 | no | no |
+| S03_F05 | context | classroom | classroom | 55/55 | 0 | no | no |
+| S03_F05 | emotion | Neutral | Neutral | 44/55 | 11 | no | no |
+| S03_F05 | gesture | point | wave | 7/55 | 48 | YES | no |
+| S03_F05 | motion | sitting | sitting | 55/55 | 0 | no | no |
+| S04_F04 | context | classroom | classroom | 61/61 | 0 | no | no |
+| S04_F04 | emotion | Sad | Neutral | 61/61 | 0 | YES | no |
+| S04_F04 | gesture | thumbs_down | thumbs_down | 39/61 | 22 | no | no |
+| S04_F04 | motion | sitting | sitting | 61/61 | 0 | no | no |
+| S05_F02 | context | classroom | classroom | 50/50 | 0 | no | no |
+| S05_F02 | emotion | Anger | Happy | 35/50 | 15 | YES | no |
+| S05_F02 | gesture | both_hands_up | both_hands_up | 27/50 | 23 | no | no |
+| S05_F02 | motion | standing | standing | 50/50 | 0 | no | no |
+| S06_F08 | context | classroom | classroom | 63/63 | 0 | no | no |
+| S06_F08 | emotion | Disgust | Neutral | 39/63 | 24 | YES | no |
+| S06_F08 | gesture | thumbs_down | thumbs_down | 42/63 | 21 | no | no |
+| S06_F08 | motion | stepping_back | stepping_back | 63/63 | 0 | no | no |
+| S07_F03 | context | classroom | classroom | 59/59 | 0 | no | no |
+| S07_F03 | emotion | Neutral | Neutral | 57/59 | 2 | no | no |
+| S07_F03 | gesture | beckoning | raise_hand | 20/59 | 39 | YES | no |
+| S07_F03 | motion | sitting | sitting | 58/59 | 1 | no | no |
+| S08_F06 | context | classroom | classroom | 56/56 | 0 | no | no |
+| S08_F06 | emotion | Neutral | Neutral | 51/56 | 5 | no | no |
+| S08_F06 | gesture | (no intended value) | thumbs_up | 3/56 | 53 | no | no |
+| S08_F06 | motion | walking | standing | 56/56 | 0 | YES | no |
+| S09_F02 | context | classroom | classroom | 50/50 | 0 | no | no |
+| S09_F02 | emotion | Surprise | Surprise | 44/50 | 6 | no | no |
+| S09_F02 | gesture | both_hands_up | both_hands_up | 41/50 | 9 | no | no |
+| S09_F02 | motion | standing | standing | 50/50 | 0 | no | no |
+| S11_F05 | context | classroom | classroom | 54/54 | 0 | no | no |
+| S11_F05 | emotion | Happy | Happy | 50/54 | 4 | no | no |
+| S11_F05 | gesture | raise_hand | raise_hand | 36/54 | 18 | no | no |
+| S11_F05 | motion | sitting | sitting | 54/54 | 0 | no | no |
+| S12_F01 | context | classroom | classroom | 54/54 | 0 | no | no |
+| S12_F01 | emotion | Happy | Happy | 51/54 | 3 | no | no |
+| S12_F01 | gesture | thumbs_up | thumbs_up | 12/54 | 42 | no | no |
+| S12_F01 | motion | sitting | sitting | 53/54 | 1 | no | no |
+| S18_F01 | context | kitchen | kitchen | 73/73 | 0 | no | no |
+| S18_F01 | emotion | Happy | Happy | 60/73 | 13 | no | no |
+| S18_F01 | gesture | thumbs_up | thumbs_up | 55/73 | 18 | no | no |
+| S18_F01 | motion | standing | standing | 73/73 | 0 | no | no |
+| S19_F02 | context | kitchen | kitchen | 54/54 | 0 | no | no |
+| S19_F02 | emotion | Fear | Surprise | 46/54 | 8 | YES | no |
+| S19_F02 | gesture | both_hands_up | both_hands_up | 52/54 | 2 | no | no |
+| S19_F02 | motion | (no intended value) | standing | 54/54 | 0 | no | no |
+| S20_F03 | context | kitchen | kitchen | 63/63 | 0 | no | no |
+| S20_F03 | emotion | Neutral | Neutral | 62/63 | 1 | no | no |
+| S20_F03 | gesture | beckoning | raise_hand | 38/63 | 25 | YES | no |
+| S20_F03 | motion | walking | walking | 63/63 | 0 | no | no |
+| S21_F04 | context | kitchen | kitchen | 58/58 | 0 | no | no |
+| S21_F04 | emotion | Sad | Neutral | 44/58 | 14 | YES | no |
+| S21_F04 | gesture | thumbs_down | thumbs_down | 46/58 | 12 | no | no |
+| S21_F04 | motion | sitting | sitting | 58/58 | 0 | no | no |
+| S22_F05 | context | kitchen | kitchen | 60/60 | 0 | no | no |
+| S22_F05 | emotion | Neutral | Neutral | 46/60 | 14 | no | no |
+| S22_F05 | gesture | point | point | 27/60 | 33 | no | no |
+| S22_F05 | motion | standing | standing | 59/60 | 1 | no | no |
+| S23_F08 | context | kitchen | kitchen | 30/30 | 0 | no | no |
+| S23_F08 | emotion | Disgust | Happy | 21/30 | 9 | YES | no |
+| S23_F08 | gesture | thumbs_down | thumbs_down | 24/30 | 6 | no | no |
+| S23_F08 | motion | stepping_back | walking | 30/30 | 0 | YES | no |
+| S24_F07 | context | kitchen | kitchen | 59/59 | 0 | no | no |
+| S24_F07 | emotion | Anger | Happy | 54/59 | 5 | YES | no |
+| S24_F07 | gesture | both_hands_up | both_hands_up | 55/59 | 4 | no | no |
+| S24_F07 | motion | standing | standing | 59/59 | 0 | no | no |
+| S25_F09 | context | kitchen | kitchen | 56/56 | 0 | no | no |
+| S25_F09 | emotion | Happy | Happy | 35/56 | 21 | no | no |
+| S25_F09 | gesture | wave | wave | 39/56 | 17 | no | no |
+| S25_F09 | motion | walking | walking | 56/56 | 0 | no | no |
+| S26_F02 | context | kitchen | kitchen | 48/48 | 0 | no | no |
+| S26_F02 | emotion | Surprise | Surprise | 37/48 | 11 | no | no |
+| S26_F02 | gesture | both_hands_up | both_hands_up | 48/48 | 0 | no | no |
+| S26_F02 | motion | stepping_back | standing | 48/48 | 0 | YES | no |
+| S27_F06 | context | kitchen | kitchen | 11/11 | 0 | no | no |
+| S27_F06 | emotion | Disgust | Neutral | 2/11 | 9 | YES | no |
+| S27_F06 | gesture | point | beckoning | 10/11 | 1 | YES | no |
+| S27_F06 | motion | stepping_back | stepping_back | 11/11 | 0 | no | no |
+| S28_F10 | context | kitchen | kitchen | 67/67 | 0 | no | no |
+| S28_F10 | emotion | Sad | Neutral | 48/67 | 19 | YES | no |
+| S28_F10 | gesture | thumbs_down | thumbs_down | 60/67 | 7 | no | no |
+| S28_F10 | motion | sitting | sitting | 67/67 | 0 | no | no |
+| S29_F03 | context | kitchen | kitchen | 58/58 | 0 | no | no |
+| S29_F03 | emotion | Neutral | Neutral | 35/58 | 23 | no | no |
+| S29_F03 | gesture | point | point | 26/58 | 32 | no | no |
+| S29_F03 | motion | walking | walking | 58/58 | 0 | no | no |

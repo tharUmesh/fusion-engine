@@ -1,53 +1,67 @@
 """
-Standalone Motion runner. Reimplements action_recognizer.py's run() per-frame
-physics-engine logic headlessly (that function is GUI-coupled with no return
-value -- see Integration_API.md #3.3), reusing the repo's own PoseClassifier
-and MOTION_LABELS via direct import (module-level, safe to import without
-triggering run()/main()).
+Standalone Motion runner. Wraps the Motion Repo's new fine-tuned model
+(MotionLSTM + temporal attention, 4-class taxonomy: sitting / standing /
+walking / stepping_back -- see "Motion Repo/README.md") behind the same
+NormalisedFrameCue interface as the other three cue runners.
 
-Correctness fixes applied here (see MODEL_ANALYSIS.md #3.3/#3.9,
-Integration_API.md #2.3):
-  - The LSTM (motion_lstm_v2_best.pth) is loaded by the native script but
-    never actually called anywhere -- classification is a fully deterministic
-    physics/rules engine. This runner does not load it at all.
-  - Cold-start guard: the native code fabricates label="Standing Still",
-    confidence=0.90 for the first <4 buffered frames of a clip (and again
-    after any single frame with no detected landmarks, since one bad frame
-    clears the whole 30-frame window) -- a value that would pass the 0.50
-    confidence floor despite not being a real detection. This runner marks
-    such frames valid=False regardless of the fabricated confidence, and
-    does so EVERY time the buffer drops below 4 frames -- not just at clip
-    start -- because `is_cold_start` is a per-frame local re-derived from
-    the live buffer length, not a one-shot flag. This has been verified to
-    also catch mid-clip re-warm-up after an occlusion event (see
-    MODEL_ANALYSIS.md's Phase 0 report).
+This replaces the previous rule-based 8-class physics engine
+(action_recognizer.py) that the old Motion Repo shipped. That repo has been
+removed; this runner now imports the new repo's own MotionInference /
+mediapipe_to_ntu25 unmodified.
 
-In batch mode, MediaPipe Pose is recreated fresh per clip (it carries
-internal cross-frame tracking state that must not leak between unrelated
-clips -- matches the native script always starting one process per video).
-PoseClassifier is stateless and reused across clips.
+Integration notes (see Motion Repo/README.md's input contract):
+  - The model needs `results.pose_world_landmarks` (metric 3D), NOT
+    `results.pose_landmarks` (normalised image-space) -- mediapipe_to_ntu25()
+    is written specifically against the world-landmark format.
+  - MotionInference is stateful (30-frame sliding window + previous-frame
+    buffer for velocity features). The model is loaded ONCE per batch run
+    (matches the other runners' "load once, loop every clip" convention);
+    engine.reset() is called at the start of every clip instead of
+    reconstructing MotionInference, exactly the use documented in the
+    repo's own README ("call engine.reset() whenever the person leaves the
+    frame or the scene changes") -- a new clip is that case.
+  - MediaPipe Pose itself IS recreated fresh per clip (its own internal
+    tracking state must not leak across unrelated clips, same reasoning as
+    the previous runner and the other three).
+  - The first WINDOW_SIZE-1 (29) frames of every clip return
+    label="buffering", confidence=0.0 -- this is the new model's own honest
+    "not enough context yet" state. Unlike the old model's cold-start
+    fabrication (label="Standing Still", confidence=0.90 -- a silent trap,
+    see MODEL_ANALYSIS.md #3.9), there is nothing to guard against here:
+    buffering frames already report confidence=0.0 and are marked
+    valid=False below without any special-casing.
+  - No separate pose classifier (Sitting/Standing/Crouching/Lying/Unknown)
+    exists in the new repo -- the single 4-class model already folds
+    static-pose state into its primary label. `extra["pose"]` from the old
+    runner is dropped; see HRI_Fusion_Engine_Handover.md §3's note on this.
+  - Frame-rate mismatch (found during Phase 0 rerun, not fixed here per
+    explicit instruction): the new model assumes ~30fps input (30-frame
+    window ~= 1s). This dataset's clips.csv shows a wide fps spread
+    (827/1270 clips at 15fps, only 226 at 30fps, remainder 23-31fps) -- the
+    model's own README states 15fps "stretches the effective window to 2s
+    and degrades accuracy". No resampling/frame-duplication is done here;
+    the model sees exactly the source clip's native frame sequence,
+    faithfully, so this is captured as a Phase 0 finding, not corrected.
 
-Run inside .venvs/motion (mediapipe==0.10.11, opencv-python, numpy, torch --
-torch is still an import-time dependency of action_recognizer.py itself
-(MotionLSTM's class definition needs torch.nn to exist at import), even
-though this runner never instantiates or calls the LSTM -- see
-Integration_API.md #4).
+Run inside .venvs/motion (torch, numpy, mediapipe==0.10.14, opencv-python --
+see "Motion Repo/requirements.txt"; no tensorflow/protobuf pin needed any
+more, the new repo has no TFLite dependency).
 
 Usage:
     # single clip
-    .venvs/motion/Scripts/python.exe runners/motion_runner.py --clip <path> --out <out.jsonl>
+    .venvs/motion/bin/python runners/motion_runner.py --clip <path> --out <out.jsonl>
 
-    # batch mode: loops every clip in clips.csv (Pose tracker recreated per clip)
-    .venvs/motion/Scripts/python.exe runners/motion_runner.py \
+    # batch mode: loads the model ONCE, loops every clip in clips.csv
+    .venvs/motion/bin/python runners/motion_runner.py \
         --manifest Data/Dataset/hri-multimodal-intent-v1.0.0/annotations/clips.csv \
         --clips-root Data/Dataset/hri-multimodal-intent-v1.0.0 \
-        --out data/measured/motion_frame_cues.jsonl
+        --out pipeline/measured/motion_frame_cues.jsonl
 """
 import argparse
 import os
 import sys
 import time
-from collections import deque
+import numpy as np
 
 RUNNERS_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, RUNNERS_DIR)
@@ -58,19 +72,15 @@ from common.schema import NormalisedFrameCue, write_jsonl, append_batch, read_ma
 from common.constants import CONFIDENCE_FLOOR  # noqa: E402
 
 import cv2  # noqa: E402
-import numpy as np  # noqa: E402
 import mediapipe as mp  # noqa: E402
-# Module-level import only (PoseClassifier, MOTION_LABELS) -- does NOT load
-# the LSTM or run any GUI code, both of which live inside run()/main().
-from action_recognizer import PoseClassifier, MOTION_LABELS  # noqa: E402
+# Module-level imports only -- MotionInference's __init__ does the (one-time,
+# batch-wide) checkpoint load; nothing here triggers webcam/GUI code.
+from inference import MotionInference, MOTION_LABELS  # noqa: E402
+from skeleton_utils import mediapipe_to_ntu25  # noqa: E402
 
 CUE = "motion"
 FLOOR = CONFIDENCE_FLOOR[CUE]
-
-HIP_IDX = [23, 24]
-BODY_IDX = HIP_IDX
-RUN_THRESH = 1.30
-SMOOTH_ALPHA = 0.25
+CHECKPOINT = os.path.join(MOTION_REPO, "checkpoints", "best_model_finetuned.pt")
 
 
 def resize_with_aspect_ratio(image, max_dim=960):
@@ -82,10 +92,12 @@ def resize_with_aspect_ratio(image, max_dim=960):
     return cv2.resize(image, (new_w, new_h), interpolation=cv2.INTER_AREA)
 
 
-def process_clip(clip_path: str, pose_classifier):
+def process_clip(clip_path: str, engine: MotionInference):
     """Pure per-clip logic. Creates a fresh MediaPipe Pose tracker for this
-    clip (see module docstring)."""
+    clip and resets the (reused, already-loaded) MotionInference engine's
+    sliding window -- see module docstring."""
     mp_pose = mp.solutions.pose
+    engine.reset()
 
     cap = cv2.VideoCapture(clip_path)
     if not cap.isOpened():
@@ -103,17 +115,14 @@ def process_clip(clip_path: str, pose_classifier):
     elif orientation == 180:
         rotation_code = cv2.ROTATE_180
 
-    keypoints_queue = deque(maxlen=30)
-    smooth_probs = np.ones(8) / 8
-
     records = []
     frame_idx = -1
-    # Diagnostics for the occlusion/re-warm-up question -- not part of the
-    # NormalisedFrameCue schema, returned separately per clip.
     n_occlusion_resets = 0
     was_tracking = False
 
-    with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5, model_complexity=1) as pose:
+    with mp_pose.Pose(model_complexity=1, enable_segmentation=False,
+                       min_detection_confidence=0.55, min_tracking_confidence=0.55,
+                       static_image_mode=False) as pose:
         while True:
             ret, frame = cap.read()
             if not ret:
@@ -128,134 +137,43 @@ def process_clip(clip_path: str, pose_classifier):
             rgb.flags.writeable = False
             results = pose.process(rgb)
             rgb.flags.writeable = True
-            landmarks = results.pose_landmarks
+            world_landmarks = results.pose_world_landmarks
 
-            pose_label = pose_classifier.classify(landmarks)
-
-            if landmarks:
+            has_landmarks = world_landmarks is not None
+            if has_landmarks:
                 if not was_tracking and frame_idx > 0:
                     n_occlusion_resets += 1  # re-acquired tracking mid-clip after a drop
                 was_tracking = True
-                pts = np.zeros((33, 3), dtype=np.float32)
-                for i, lm in enumerate(landmarks.landmark):
-                    pts[i] = [lm.x, lm.y, lm.z]
-                keypoints_queue.append(pts)
+                joints_25 = mediapipe_to_ntu25(world_landmarks.landmark)
             else:
                 was_tracking = False
-                keypoints_queue.clear()
+                # README: "pass zeros for brief gaps" -- keeps the sliding
+                # window advancing instead of fabricating a detection.
+                joints_25 = np.zeros((25, 3), dtype=np.float32)
 
-            # Defaults (native code's cold-start fabrication)
-            motion_label = "Standing Still"
-            confidence = 0.90
-            probabilities = np.zeros(8)
-            probabilities[1] = 0.90
-            is_cold_start = True  # fix: re-derived every frame, see module docstring
+            result = engine.update(joints_25)
+            is_buffering = (result.label == "buffering")
 
-            if len(keypoints_queue) >= 4 and landmarks:
-                is_cold_start = False
-                arr = np.array(keypoints_queue)
-                vel = np.diff(arr, axis=0)
+            label = result.label if not is_buffering else "Unknown"
+            confidence = float(result.confidence)
+            probs_dict = {} if is_buffering else {
+                MOTION_LABELS[i]: float(p) for i, p in enumerate(result.probs)
+            }
 
-                body_vel = vel[:, BODY_IDX, :2]
-                body_speed = float(np.mean(np.abs(body_vel)) * 100.0)
-
-                look_back = min(15, len(arr) - 1)
-                hip_w = np.linalg.norm(arr[-look_back - 1:, 23, :2] - arr[-look_back - 1:, 24, :2], axis=1)
-                dh = float(hip_w[-1] - hip_w[0])
-                path_h = float(np.sum(np.abs(np.diff(hip_w))))
-                eff_h = abs(dh) / (path_h + 1e-5)
-
-                hips_xy = arr[-look_back - 1:, HIP_IDX, :2].mean(axis=1)
-                dx_hip = float(hips_xy[-1, 0] - hips_xy[0, 0])
-                dy_hip = float(hips_xy[-1, 1] - hips_xy[0, 1])
-                path_x_hip = float(np.sum(np.abs(np.diff(hips_xy[:, 0]))))
-                path_y_hip = float(np.sum(np.abs(np.diff(hips_xy[:, 1]))))
-                eff_x_hip = abs(dx_hip) / (path_x_hip + 1e-5)
-                eff_y_hip = abs(dy_hip) / (path_y_hip + 1e-5)
-
-                sh_xy = arr[-look_back - 1:, [11, 12], :2].mean(axis=1)
-                dx_sh = float(sh_xy[-1, 0] - sh_xy[0, 0])
-                dy_sh = float(sh_xy[-1, 1] - sh_xy[0, 1])
-                path_x_sh = float(np.sum(np.abs(np.diff(sh_xy[:, 0]))))
-                path_y_sh = float(np.sum(np.abs(np.diff(sh_xy[:, 1]))))
-                eff_x_sh = abs(dx_sh) / (path_x_sh + 1e-5)
-                eff_y_sh = abs(dy_sh) / (path_y_sh + 1e-5)
-
-                is_translating_across = False
-                if abs(dx_hip) > 0.024 and eff_x_hip > 0.70:
-                    if abs(dx_sh) > 0.020 and eff_x_sh > 0.70:
-                        if np.sign(dx_hip) == np.sign(dx_sh):
-                            is_translating_across = True
-
-                is_translating_vert = False
-                if abs(dy_hip) > 0.020 and eff_y_hip > 0.70:
-                    if abs(dy_sh) > 0.016 and eff_y_sh > 0.70:
-                        if np.sign(dy_hip) == np.sign(dy_sh):
-                            is_translating_vert = True
-
-                is_directed_walk = False
-                walk_type = "Walking"
-                if is_translating_across and abs(dx_hip) > abs(dy_hip) * 1.5:
-                    is_directed_walk = True
-                    walk_type = "Walk Across"
-                elif is_translating_vert or (abs(dh) > 0.012 and eff_h > 0.70):
-                    is_directed_walk = True
-                    walk_type = "Walking"
-
-                probs = np.zeros(8)
-                if body_speed >= RUN_THRESH:
-                    if dx_hip < -0.01:
-                        motion_label, probs[4] = "Run Backward", 0.85
-                    else:
-                        motion_label, probs[5] = "Run (Fast Movement)", 0.85
-                elif is_directed_walk:
-                    if walk_type == "Walk Across":
-                        motion_label, probs[3] = "Walk Across", 0.80
-                    else:
-                        motion_label, probs[2] = "Walking", 0.80
-                else:
-                    if pose_label == "Sitting":
-                        motion_label, probs[0] = "Sitting Still", 0.95
-                    elif pose_label == "Crouching":
-                        motion_label, probs[6] = "Leaning Forward", 0.90
-                    elif body_speed < 0.08:
-                        motion_label, probs[7] = "Frozen/Rigid Stand", 0.90
-                    else:
-                        motion_label, probs[1] = "Standing Still", 0.90
-
-                smooth_probs = SMOOTH_ALPHA * probs + (1 - SMOOTH_ALPHA) * smooth_probs
-                voted_idx = int(np.argmax(smooth_probs))
-                motion_label = MOTION_LABELS[voted_idx]
-                confidence = float(smooth_probs[voted_idx])
-                probabilities = smooth_probs
-
-            elif not landmarks:
-                smooth_probs = np.ones(8) / 8
-                motion_label = "Standing Still"
-                confidence = 0.0
-                probabilities = np.zeros(8)
-                # not a cold-start fabrication -- genuinely no detection this frame
-
-            probs_dict = {lbl: float(p) for lbl, p in zip(MOTION_LABELS, probabilities)}
-
-            # Fix: cold-start frames (native code fabricates "Standing Still"
-            # @ 0.90 before the 30-frame buffer has >=4 entries -- including
-            # after a mid-clip occlusion reset) are never valid, regardless
-            # of the fabricated confidence passing FLOOR.
-            valid = (confidence >= FLOOR) and (not is_cold_start) and (landmarks is not None)
+            valid = (not is_buffering) and (confidence >= FLOOR) and has_landmarks
 
             records.append(NormalisedFrameCue(
-                cue=CUE, frame_idx=frame_idx, label=motion_label, confidence=confidence,
+                cue=CUE, frame_idx=frame_idx, label=label, confidence=confidence,
                 probs=probs_dict, valid=valid,
-                extra={"pose": pose_label, "cold_start": is_cold_start}))
+                extra={"buffering": is_buffering, "has_landmarks": has_landmarks}))
 
     cap.release()
     return records, n_occlusion_resets
 
 
 def run_single(clip_path: str, out_path: str):
-    pose_classifier = PoseClassifier()
-    records, n_resets = process_clip(clip_path, pose_classifier)
+    engine = MotionInference(CHECKPOINT)
+    records, n_resets = process_clip(clip_path, engine)
     write_jsonl(records, out_path)
     n_valid = sum(1 for r in records if r.valid)
     print(f"[motion_runner] {len(records)} frames -> {out_path} "
@@ -283,13 +201,13 @@ def run_batch(manifest_csv: str, clips_root: str, out_path: str, limit=None, res
         mode = "w"
         stats_mode = "w"
 
-    pose_classifier = PoseClassifier()
+    engine = MotionInference(CHECKPOINT)
 
     stats_f = None
     if stats_path:
         stats_f = open(stats_path, stats_mode, encoding="utf-8", newline="")
         if stats_mode == "w":
-            stats_f.write("clip_id,total_frames,valid_frames,invalid_frames,cold_start_frames,"
+            stats_f.write("clip_id,total_frames,valid_frames,invalid_frames,buffering_frames,"
                            "no_landmark_frames,mid_clip_occlusion_resets\n")
 
     t0 = time.time()
@@ -301,7 +219,7 @@ def run_batch(manifest_csv: str, clips_root: str, out_path: str, limit=None, res
                 continue
             clip_path = os.path.join(clips_root, row["filepath"])
             try:
-                records, n_resets = process_clip(clip_path, pose_classifier)
+                records, n_resets = process_clip(clip_path, engine)
             except Exception as e:
                 print(f"[motion_runner] ERROR on {clip_id} ({clip_path}): {e}")
                 continue
@@ -310,10 +228,10 @@ def run_batch(manifest_csv: str, clips_root: str, out_path: str, limit=None, res
 
             if stats_f:
                 n_valid = sum(1 for r in records if r.valid)
-                n_cold = sum(1 for r in records if r.extra.get("cold_start"))
-                n_no_landmark = sum(1 for r in records if r.confidence == 0.0 and not r.extra.get("cold_start"))
+                n_buffering = sum(1 for r in records if r.extra.get("buffering"))
+                n_no_landmark = sum(1 for r in records if not r.extra.get("has_landmarks"))
                 stats_f.write(f"{clip_id},{len(records)},{n_valid},{len(records)-n_valid},"
-                               f"{n_cold},{n_no_landmark},{n_resets}\n")
+                               f"{n_buffering},{n_no_landmark},{n_resets}\n")
                 stats_f.flush()
 
             n_done += 1
@@ -337,7 +255,7 @@ if __name__ == "__main__":
     ap.add_argument("--clips-root", help="batch mode: dataset root (filepath column is relative to this)")
     ap.add_argument("--limit", type=int, default=None, help="batch mode: only process first N rows (testing)")
     ap.add_argument("--resume", action="store_true", help="batch mode: skip clip_ids already present in --out")
-    ap.add_argument("--stats-out", help="batch mode: per-clip valid/invalid/occlusion CSV diagnostic")
+    ap.add_argument("--stats-out", help="batch mode: per-clip valid/invalid/buffering CSV diagnostic")
     args = ap.parse_args()
 
     if args.manifest:

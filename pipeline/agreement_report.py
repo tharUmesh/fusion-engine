@@ -74,7 +74,7 @@ def main():
     clip_cues = read_csv(CLIP_CUES_CSV)
 
     clip_to_scenario = {r["clip_id"]: r["scenario_id"] for r in clips}
-    scenario_base = {r["scenario_id"]: r for r in scenarios}  # keyed by "S01" etc.
+    scenario_base = {r["Scenario ID"]: r for r in scenarios}  # keyed by "S01" etc.
 
     # clip_cues.csv rows: (clip_id, cue) -> dict
     cc_index = defaultdict(dict)  # scenario_id -> cue -> list of clip-level rows

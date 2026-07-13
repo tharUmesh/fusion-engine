@@ -164,8 +164,11 @@ Everything reads from this. Define it once.
 ```yaml
 emotion_classes: [Surprise, Fear, Disgust, Happy, Sad, Anger, Neutral]
 gesture_classes: [wave, point, thumbs_up, thumbs_down, raise_hand, both_hands_up, beckoning, Unknown]
-pose_classes:    [Sitting, Standing, Crouching, Lying, Unknown]
-motion_classes:  [Sitting_Still, Standing_Still, Walking, Walk_Across, Run_Backward, Run_Fast, Leaning_Forward, Frozen_Rigid_Stand]
+# pose_classes (Sitting/Standing/Crouching/Lying/Unknown) retired 2026-07 along with the
+# old rule-engine Motion Repo -- the new model has no separate pose classifier, so
+# runners/motion_runner.py no longer emits extra["pose"]. Revisit in Phase 2 if a
+# separate pose signal is needed.
+motion_classes:  [sitting, standing, walking, stepping_back]   # replaced 2026-07 -- see MODEL_ANALYSIS.md Motion section update
 context_scenes:  [classroom, kitchen]          # extend as data grows
 context_activities: [studying, cooking, idle, unknown]
 
