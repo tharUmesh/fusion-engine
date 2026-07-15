@@ -1,0 +1,67 @@
+2026-07-13 20:17:40.287578: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-07-13 20:17:40.307671: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-07-13 20:17:40.307699: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-07-13 20:17:40.308252: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-07-13 20:17:40.311333: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-07-13 20:17:40.660505: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783954061.136291 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954061.176903 1906791 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1783954062.626945 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954062.655684 1906937 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954064.101524 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954064.131965 1907055 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954065.563986 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954065.599112 1907168 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954067.165533 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954067.196448 1907288 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954068.602122 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954068.633712 1907406 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954069.910522 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954069.939458 1907524 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954071.362064 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954071.393799 1907587 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954072.954543 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954072.984693 1907706 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954075.061725 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954075.094898 1907828 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954077.169083 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954077.203350 1908005 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954079.403285 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954079.438253 1908179 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954081.822397 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954081.858450 1908424 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954084.125432 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954084.158279 1908601 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954086.243713 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954086.274083 1908823 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954088.639290 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954088.675252 1909065 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954091.049285 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954091.083628 1909245 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954093.264401 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954093.298765 1909473 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954095.305111 1906646 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954095.339383 1909641 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+[extract_world_landmarks] 19 clips, mediapipe=0.10.11, tag=mp0.10.11
+[extract_world_landmarks] S06_F08_c001: (76, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c001__mp0.10.11.npy
+[extract_world_landmarks] S06_F08_c002: (82, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c002__mp0.10.11.npy
+[extract_world_landmarks] S06_F08_c003: (79, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c003__mp0.10.11.npy
+[extract_world_landmarks] S06_F08_c004: (82, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c004__mp0.10.11.npy
+[extract_world_landmarks] S08_F06_c001: (73, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c001__mp0.10.11.npy
+[extract_world_landmarks] S08_F06_c002: (69, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c002__mp0.10.11.npy
+[extract_world_landmarks] S08_F06_c003: (77, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c003__mp0.10.11.npy
+[extract_world_landmarks] S08_F06_c004: (87, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c004__mp0.10.11.npy
+[extract_world_landmarks] S23_F08_c001: (113, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c001__mp0.10.11.npy
+[extract_world_landmarks] S23_F08_c002: (116, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c002__mp0.10.11.npy
+[extract_world_landmarks] S23_F08_c003: (118, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c003__mp0.10.11.npy
+[extract_world_landmarks] S23_F08_c004: (120, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c004__mp0.10.11.npy
+[extract_world_landmarks] S26_F02_c001: (115, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c001__mp0.10.11.npy
+[extract_world_landmarks] S26_F02_c002: (109, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c002__mp0.10.11.npy
+[extract_world_landmarks] S26_F02_c003: (122, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c003__mp0.10.11.npy
+[extract_world_landmarks] S26_F02_c004: (119, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c004__mp0.10.11.npy
+[extract_world_landmarks] S27_F06_c001: (104, 33, 3) -> pipeline/experiments/mp_compare/S27_F06_c001__mp0.10.11.npy
+[extract_world_landmarks] S27_F06_c002: (99, 33, 3) -> pipeline/experiments/mp_compare/S27_F06_c002__mp0.10.11.npy
+[extract_world_landmarks] S27_F06_c003: (68, 33, 3) -> pipeline/experiments/mp_compare/S27_F06_c003__mp0.10.11.npy

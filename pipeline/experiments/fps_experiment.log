@@ -1,0 +1,436 @@
+2026-07-13 20:16:55.879811: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-07-13 20:16:55.900037: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-07-13 20:16:55.900064: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-07-13 20:16:55.900665: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-07-13 20:16:55.903941: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-07-13 20:16:56.244901: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783954017.492882 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954017.555583 1904834 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1783954019.157108 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954019.191386 1904933 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954020.879917 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954020.909623 1905001 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954022.505530 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954022.537223 1905076 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954024.194955 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954024.224934 1905147 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954025.883297 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954025.913046 1905224 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954027.521410 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954027.550704 1905307 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954029.146507 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954029.175110 1905375 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954030.741960 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954030.777188 1905443 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954032.450147 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954032.478018 1905512 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954034.274674 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954034.305642 1905584 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954036.022978 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954036.050807 1905653 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954037.609236 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954037.639656 1905721 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954039.170032 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954039.199596 1905790 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954040.710595 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954040.743584 1905855 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954042.370103 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954042.398032 1905924 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954044.040130 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954044.068581 1905992 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954046.002310 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954046.037235 1906069 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954047.671528 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954047.702344 1906137 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954049.477177 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954049.507358 1906205 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954051.090813 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954051.118800 1906276 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954053.169010 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954053.198462 1906353 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954054.723929 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954054.753867 1906421 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954056.285096 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954056.314447 1906489 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954057.982796 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954058.010292 1906572 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954059.493393 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954059.524696 1906640 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954061.286368 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954061.323008 1906872 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954063.040438 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954063.071710 1906991 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954064.702026 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954064.734963 1907109 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954066.490018 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954066.523433 1907234 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954068.180210 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954068.209226 1907352 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954069.819866 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954069.852333 1907469 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954071.663772 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954071.692439 1907642 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954073.433876 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954073.464826 1907760 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954075.535696 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954075.564048 1907887 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954077.117939 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954077.162390 1907955 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954079.068054 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954079.096722 1908124 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954080.809215 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954080.840058 1908274 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954082.555778 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954082.587329 1908482 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954084.212821 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954084.244188 1908651 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954086.049521 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954086.085028 1908773 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954087.697240 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954087.730551 1908956 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954089.544504 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954089.574669 1909124 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954091.367964 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954091.398448 1909300 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954093.034172 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954093.068788 1909419 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954094.750689 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954094.781653 1909591 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954096.922766 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954096.958423 1909762 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954099.086696 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954099.119752 1909887 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954100.769798 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954100.810712 1909955 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954102.868991 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954102.904320 1910129 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954105.194429 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954105.224908 1910256 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954107.380353 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954107.409821 1910374 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954108.970293 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954109.004173 1910442 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954111.225585 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954111.262933 1910618 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954113.415631 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954113.446214 1910741 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954115.610832 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954115.643615 1910868 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954117.729724 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954117.760169 1911001 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954119.499645 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954119.532725 1911077 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954121.408216 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954121.439118 1911200 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954123.098213 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954123.128512 1911319 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954124.710818 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954124.740535 1911437 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954126.386537 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954126.428266 1911541 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954128.069099 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954128.099897 1911625 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954129.774802 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954129.810831 1911753 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954131.425675 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954131.458913 1911872 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954132.825150 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954132.859652 1911985 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954134.467368 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954134.500622 1912103 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954136.283786 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954136.323517 1912226 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954138.090267 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954138.122844 1912348 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954139.880234 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954139.915052 1912473 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954141.706424 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954141.760502 1912571 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954143.406149 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954143.441658 1912661 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954145.126985 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954145.155015 1912779 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954146.733768 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954146.771742 1912897 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954148.546027 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954148.577715 1913032 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954150.109538 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954150.142471 1913150 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954151.653159 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954151.686603 1913218 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954153.205527 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954153.237725 1913336 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954154.728927 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954154.757534 1913450 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954156.611498 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954156.643294 1913523 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954158.320814 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954158.349495 1913807 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954160.329956 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954160.364095 1913928 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954162.026818 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954162.056819 1914047 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954163.934569 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954163.962836 1914165 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954165.662722 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954165.702678 1914267 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954167.385814 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954167.414466 1914354 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954169.486391 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954169.515980 1914478 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954171.868761 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954171.899561 1914879 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954173.749016 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954173.780233 1915077 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954175.599796 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954175.631008 1915285 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954177.443933 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954177.477808 1915499 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954179.138670 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954179.172352 1915698 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954180.895535 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954180.927219 1915897 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954182.801006 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954182.831676 1916138 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954184.436464 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954184.464583 1916256 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954186.005874 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954186.035624 1916405 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954187.562096 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954187.592605 1916602 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954189.198345 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954189.228462 1916753 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954191.111664 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954191.143061 1916871 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954192.833423 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954192.862662 1917075 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954194.587725 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954194.633673 1917224 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954196.343465 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954196.373716 1917428 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954198.347323 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954198.377003 1917631 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954200.250984 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954200.278871 1917840 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954201.890861 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954201.919696 1917957 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954203.965801 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954203.994258 1918161 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954205.800358 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954205.828771 1918310 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954207.689239 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954207.723234 1918533 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954209.625909 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954209.662088 1918656 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954211.317680 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954211.350601 1918724 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954212.881433 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954212.918433 1918841 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954214.722833 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954214.758810 1918965 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954216.806545 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954216.837496 1919037 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954218.738530 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954218.766742 1919163 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954220.756724 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954220.790576 1919283 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954222.709504 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954222.738010 1919407 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954224.473431 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954224.507950 1919473 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954226.249113 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954226.279384 1919591 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954228.086142 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954228.115792 1919709 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954230.035778 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954230.071428 1919838 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954232.474900 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954232.509377 1919965 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954234.909886 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954234.941192 1920092 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954237.494585 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954237.525527 1920231 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954239.980235 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954240.010220 1920358 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954242.490925 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954242.525227 1920491 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954245.003715 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954245.032066 1920669 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954247.592594 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954247.626904 1920803 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954250.195164 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954250.228140 1920930 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954252.983795 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954253.013496 1921141 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954255.453460 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954255.484276 1921268 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954258.084277 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954258.114990 1921432 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954260.496039 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954260.526967 1921552 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954262.959163 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954262.987325 1921719 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954265.466603 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954265.494802 1921846 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954268.051022 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954268.080843 1922038 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954270.523532 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954270.552608 1922218 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954273.254482 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954273.285168 1922437 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954275.938565 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954275.968685 1922564 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954277.404501 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954277.440683 1922681 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954278.848161 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954278.878160 1922793 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954280.595128 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954280.636057 1922953 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954282.533845 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954282.563821 1923087 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954284.737638 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954284.771153 1923214 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954286.369141 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954286.397949 1923332 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954288.813479 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954288.846143 1923459 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954291.363693 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954291.397626 1923638 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954293.929338 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954293.959324 1923769 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954295.505621 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954295.535314 1923883 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954297.566345 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954297.598881 1924025 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954299.500182 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954299.527683 1924148 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954301.899020 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954301.933286 1924277 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954304.173049 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954304.211743 1924406 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954306.963708 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954306.994851 1924816 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954309.565129 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954309.599591 1924945 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954312.140124 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954312.175424 1925123 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954314.619404 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954314.654993 1925249 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954317.244107 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954317.279183 1925431 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954319.695834 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954319.725401 1925565 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954321.915027 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954321.946489 1925683 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954324.431588 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954324.463112 1925815 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954326.772858 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954326.806003 1925940 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954329.256685 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954329.289200 1926082 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954331.646794 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954331.679560 1926263 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954334.304993 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954334.335479 1926395 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954336.677579 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954336.709807 1926878 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954338.158375 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954338.191509 1926996 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954340.227090 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954340.259566 1927114 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954342.127102 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954342.157810 1927339 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954343.892549 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954343.924300 1927407 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954345.535394 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954345.569376 1927575 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954347.509381 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954347.540190 1927643 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954349.674297 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954349.705413 1927823 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954351.526672 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954351.573257 1927941 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954353.891047 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954353.941199 1928068 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954356.448874 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954356.480133 1928248 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954358.282350 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954358.310763 1928384 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954361.917462 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954361.947137 1928518 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954365.630362 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954365.662742 1928715 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954369.564068 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954369.596684 1940565 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954373.300960 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954373.331229 1945951 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954377.046129 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954377.079469 1949595 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954380.813803 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954380.844908 1949794 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954384.566855 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954384.598453 1949987 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954391.327624 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954391.363009 1950274 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954396.424105 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954396.456283 1950528 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954400.878387 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954400.907104 1950778 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954405.328535 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954405.360752 1951028 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954409.600762 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954409.630650 1951277 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954415.005358 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954415.034644 1951594 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954418.590876 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954418.622244 1951796 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954422.193146 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954422.225200 1951936 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954425.792692 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954425.825707 1952124 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954429.444378 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954429.475707 1952358 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954433.209820 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954433.242111 1952547 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954436.720452 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954436.752699 1952742 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954440.303539 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954440.335061 1952931 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954444.610309 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954444.644043 1953185 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954448.489299 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954448.519246 1953433 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954450.805757 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954450.841075 1953564 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954453.021265 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954453.052814 1953741 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954454.607307 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954454.636182 1953859 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954456.655577 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954456.687761 1953991 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954458.849360 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954458.881612 1954059 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954460.836477 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954460.865520 1954186 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954463.417571 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954463.448224 1954314 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954464.770263 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954464.799677 1954430 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954466.153761 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954466.185735 1954543 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+I0000 00:00:1783954467.847131 1904686 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954467.877162 1954616 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+[motion_fps_experiment] 208 clips across 5 scenarios
+MotionInference ready | device=cuda | checkpoint epoch=20 | val_acc=54.163%
+[motion_fps_experiment] 25/208 clips done
+[motion_fps_experiment] 50/208 clips done
+[motion_fps_experiment] 75/208 clips done
+[motion_fps_experiment] 100/208 clips done
+[motion_fps_experiment] 125/208 clips done
+[motion_fps_experiment] 150/208 clips done
+[motion_fps_experiment] 175/208 clips done
+[motion_fps_experiment] 200/208 clips done
+[motion_fps_experiment] batch done: 208 clips -> pipeline/experiments/motion_frame_cues_fps_normalized.jsonl

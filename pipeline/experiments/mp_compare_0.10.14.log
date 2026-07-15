@@ -1,0 +1,105 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783954170.239956 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954170.284109 1914668 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1783954170.324361 1914649 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954170.339911 1914663 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+/home/hri_multimodal/Downloads/fusion-engine/.venvs/motion_mp014_test/lib/python3.10/site-packages/google/protobuf/symbol_database.py:55: UserWarning: SymbolDatabase.GetPrototype() is deprecated. Please use message_factory.GetMessageClass() instead. SymbolDatabase.GetPrototype() will be removed soon.
+  warnings.warn('SymbolDatabase.GetPrototype() is deprecated. Please '
+I0000 00:00:1783954171.780347 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954171.813548 1914798 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954171.853475 1914773 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954171.867004 1914793 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954173.418605 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954173.448599 1914996 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954173.485874 1914968 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954173.499573 1914987 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954174.945247 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954174.974597 1915195 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954175.014733 1915171 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954175.028033 1915188 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954176.537866 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954176.567773 1915394 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954176.608529 1915371 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954176.627336 1915387 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954178.004162 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954178.040897 1915558 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954178.082477 1915536 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954178.094934 1915548 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954179.444771 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954179.476024 1915753 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954179.517621 1915727 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954179.531558 1915744 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954180.983013 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954181.012864 1915951 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954181.047690 1915924 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954181.062642 1915947 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954182.539280 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954182.575157 1916048 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954182.615422 1916022 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954182.633487 1916040 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954184.768762 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954184.811708 1916306 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954184.853358 1916275 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954184.866878 1916295 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954186.828939 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954186.857839 1916516 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954186.898884 1916491 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954186.913970 1916507 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954188.982738 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954189.010721 1916665 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954189.050098 1916637 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954189.061858 1916661 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954191.278670 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954191.309451 1916926 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954191.351526 1916901 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954191.362865 1916916 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954193.511161 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954193.541288 1917134 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954193.580356 1917109 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954193.593773 1917128 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954195.541471 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954195.577019 1917338 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954195.621328 1917311 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954195.635462 1917334 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954197.933297 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954197.962811 1917546 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954197.998811 1917521 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954198.010091 1917541 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954200.191748 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954200.241364 1917754 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954200.290299 1917730 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954200.307183 1917747 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954202.374276 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954202.404214 1918012 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954202.449808 1917981 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954202.459397 1918007 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954204.572792 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954204.606127 1918220 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954204.648552 1918190 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954204.657191 1918215 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+I0000 00:00:1783954206.154206 1914537 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1783954206.183666 1918369 gl_context.cc:357] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 570.211.01), renderer: NVIDIA GeForce RTX 5090/PCIe/SSE2
+W0000 00:00:1783954206.223758 1918341 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1783954206.240200 1918359 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[extract_world_landmarks] 20 clips, mediapipe=0.10.14, tag=mp0.10.14
+[extract_world_landmarks] S06_F08_c001: (76, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c001__mp0.10.14.npy
+[extract_world_landmarks] S06_F08_c002: (82, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c002__mp0.10.14.npy
+[extract_world_landmarks] S06_F08_c003: (79, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c003__mp0.10.14.npy
+[extract_world_landmarks] S06_F08_c004: (82, 33, 3) -> pipeline/experiments/mp_compare/S06_F08_c004__mp0.10.14.npy
+[extract_world_landmarks] S08_F06_c001: (73, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c001__mp0.10.14.npy
+[extract_world_landmarks] S08_F06_c002: (69, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c002__mp0.10.14.npy
+[extract_world_landmarks] S08_F06_c003: (77, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c003__mp0.10.14.npy
+[extract_world_landmarks] S08_F06_c004: (87, 33, 3) -> pipeline/experiments/mp_compare/S08_F06_c004__mp0.10.14.npy
+[extract_world_landmarks] S23_F08_c001: (113, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c001__mp0.10.14.npy
+[extract_world_landmarks] S23_F08_c002: (116, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c002__mp0.10.14.npy
+[extract_world_landmarks] S23_F08_c003: (118, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c003__mp0.10.14.npy
+[extract_world_landmarks] S23_F08_c004: (120, 33, 3) -> pipeline/experiments/mp_compare/S23_F08_c004__mp0.10.14.npy
+[extract_world_landmarks] S26_F02_c001: (115, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c001__mp0.10.14.npy
+[extract_world_landmarks] S26_F02_c002: (109, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c002__mp0.10.14.npy
+[extract_world_landmarks] S26_F02_c003: (122, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c003__mp0.10.14.npy
+[extract_world_landmarks] S26_F02_c004: (119, 33, 3) -> pipeline/experiments/mp_compare/S26_F02_c004__mp0.10.14.npy
+[extract_world_landmarks] S27_F06_c001: (104, 33, 3) -> pipeline/experiments/mp_compare/S27_F06_c001__mp0.10.14.npy
+[extract_world_landmarks] S27_F06_c002: (99, 33, 3) -> pipeline/experiments/mp_compare/S27_F06_c002__mp0.10.14.npy
+[extract_world_landmarks] S27_F06_c003: (68, 33, 3) -> pipeline/experiments/mp_compare/S27_F06_c003__mp0.10.14.npy
+[extract_world_landmarks] S27_F06_c004: (92, 33, 3) -> pipeline/experiments/mp_compare/S27_F06_c004__mp0.10.14.npy
